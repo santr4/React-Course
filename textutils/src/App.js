@@ -12,7 +12,7 @@ import Navbar from './Components/Navbar';
 function App() {
   return (
     <>
-      <Navbar title="|TextUtils|"/>
+      <Navbar title="|TextUtils|" aboutText="About Us" />
     </>
   );
 }
