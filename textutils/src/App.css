@@ -43,3 +43,12 @@
 .navbar-brand{
   font-weight : bold;
 }
+
+.hello_name{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+  color: rgb(67, 129, 98);
+}
+
+.format_name{
+  color: orange;
+}
