@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <Navbar title="|TextUtils|" aboutText="About Us" />
+      <br/>
       <TextForm row={10} col={10} />
     </>
   );
