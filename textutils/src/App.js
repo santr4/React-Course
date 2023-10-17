@@ -13,9 +13,11 @@ import TextForm from './Components/TextForm';
 function App() {
   return (
     <>
-      <Navbar title="|TextUtils|" aboutText="About Us" />
-      <br/>
-      <TextForm row={10} col={10} />
+      <Navbar title="TextUtils" aboutText="About Us" />
+      <br />
+      <div className="container">
+        <TextForm row={5} text="Enter your text here" />
+      </div>
     </>
   );
 }
