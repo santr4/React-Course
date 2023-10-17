@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function TextForm(props) {
     const [text, setText] = useState('Enter your text here.'); // react hooks
     const handleUpClick = ()=>{
-        console.log("Uppercase button was clicked" + text);
+        // console.log("Uppercase button was clicked" + text);
         let newText = text.toUpperCase();
         setText(newText);
     }
