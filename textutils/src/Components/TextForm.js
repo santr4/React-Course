@@ -18,6 +18,11 @@ export default function TextForm(props) {
         setText(event.target.value);
     }
 
+    const handleClearClick = () => {
+        let newText = '';
+        setText(newText);
+    }
+
     return (
         <> {/* this is fragment in react*/}
             <div className="mb-3">
@@ -28,8 +33,9 @@ export default function TextForm(props) {
                 <br />
                 <br />
                 <textarea className="htmlForm-control" value={text} id="myBox" rows={props.row + 5} onChange={handleOnChange} cols={150}></textarea>
-                <button className="btn btn-primary" onClick={handleUpClick}>UpperCase</button>
-                <button className="btn btn-primary my-3 mx-2" onClick={handleLowerClick}>LowerCase</button>
+                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className="btn btn-primary my-3 mx-2" onClick={handleLowerClick}>Convert to LowerCase</button>
+                <button className="btn btn-primary my-3 mx-2" onClick={handleClearClick}>Clear Text</button>
             </div>
             <div className="container1 my-5">
                 <h2>Your text summary</h2>
