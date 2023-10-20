@@ -11,6 +11,7 @@ import './App.css';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
+import Alert from './Components/Alert';
 
 
 
@@ -33,7 +34,10 @@ function App() {
   return (
     <>
       <div>
-      <Navbar title="TextUtils" aboutText="Contact Us" mode={mode} toggleMode={toggleMode}/>
+        <Navbar title="TextUtils" aboutText="Contact Us" mode={mode} toggleMode={toggleMode}/>
+      </div>
+      <div>
+        <Alert alert="This is an Alert." />
       </div>
       <div className="container my-3">
         <TextForm row={5} text="Enter your text here" />
