@@ -7,6 +7,7 @@ In React, "props" is short for "properties," and it refers to a mechanism for pa
 */
 
 import './App.css';
+import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 
@@ -16,10 +17,15 @@ import TextForm from './Components/TextForm';
 function App() {
   return (
     <>
-      <Navbar title="TextUtils" aboutText="About Us" />
-      <br />
-      <div className="container">
+      <div>
+      <Navbar title="TextUtils" aboutText="Contact Us" />
+      </div>
+      <div className="container my-3">
         <TextForm row={5} text="Enter your text here" />
+      </div>
+      <br/>
+      <div className="container my-3">
+        <About/>
       </div>
     </>
   );
