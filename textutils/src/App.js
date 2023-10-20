@@ -19,15 +19,29 @@ import Alert from './Components/Alert';
 function App() {
 
   const [mode,setMode] = useState('light');
+  const [alert,setAlert] = useState(null);
+
+  const showAlert = (message,type)=> {
+    setAlert({
+      msg : message,
+      type : type
+    })
+
+    setTimeout(()=> {
+      setAlert(null);
+    },1500);
+  }
 
   const toggleMode = ()=> {
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#262224';
+      showAlert('Dark Mode has been activated','success');
     }
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
+      showAlert('Light Mode has been activated','success');
     }
   }
 
@@ -37,10 +51,10 @@ function App() {
         <Navbar title="TextUtils" aboutText="Contact Us" mode={mode} toggleMode={toggleMode}/>
       </div>
       <div>
-        <Alert alert="This is an Alert." />
+        <Alert alert={alert} />
       </div>
       <div className="container my-3">
-        <TextForm row={5} text="Enter your text here" />
+        <TextForm row={5} text="Enter your text here" showAlert={showAlert} />
       </div>
       <br/>
       <div className="container my-3">
