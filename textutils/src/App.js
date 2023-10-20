@@ -5,6 +5,7 @@
 /*
 In React, "props" is short for "properties," and it refers to a mechanism for passing data from a parent component to a child component. Props are a fundamental concept in React and are used to make components more dynamic and reusable.
 */
+import React, {useState} from 'react'
 
 import './App.css';
 import About from './Components/About';
@@ -15,10 +16,24 @@ import TextForm from './Components/TextForm';
 
 
 function App() {
+
+  const [mode,setMode] = useState('light');
+
+  const toggleMode = ()=> {
+    if(mode === 'light'){
+      setMode('dark');
+      document.body.style.backgroundColor = '#262224';
+    }
+    else{
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+    }
+  }
+
   return (
     <>
       <div>
-      <Navbar title="TextUtils" aboutText="Contact Us" />
+      <Navbar title="TextUtils" aboutText="Contact Us" mode={mode} toggleMode={toggleMode}/>
       </div>
       <div className="container my-3">
         <TextForm row={5} text="Enter your text here" />
