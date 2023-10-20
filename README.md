@@ -4,5 +4,5 @@
   - Resources that I have used to learn react are:
                 - CodeWithHarry
                 - React Docs
-  - Projects done:
+  - Project done:
           - TextUtils
