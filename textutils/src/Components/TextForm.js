@@ -23,6 +23,12 @@ export default function TextForm(props) {
         setText(newText);
     }
 
+    const handleCopy = ()=> {
+        var text = document.getElementById("myBox");
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
+
     return (
         <> {/* this is fragment in react*/}
             <div className="mb-3">
@@ -36,6 +42,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
                 <button className="btn btn-primary my-3 mx-2" onClick={handleLowerClick}>Convert to LowerCase</button>
                 <button className="btn btn-primary my-3 mx-2" onClick={handleClearClick}>Clear Text</button>
+                <button className="btn btn-primary my-3 mx-2" onClick={handleCopy}>Copy Text</button>
             </div>
             <div className="container1 my-5">
                 <h2>Your text summary</h2>
